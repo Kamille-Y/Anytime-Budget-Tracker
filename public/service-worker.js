@@ -11,17 +11,17 @@ var urlsToCache = [
   "/icons/icon-512x512.png"
 ];
 
-self.addEventListener("install", function(event) {
+self.addEventListener("install", (event) => {
   // Perform install steps
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function(cache) {
+    caches.open(CACHE_NAME).then((cache) => {
       console.log("Opened cache");
       return cache.addAll(urlsToCache);
     })
   );
 });
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener("fetch", (event) => {
   // cache all get requests to /api routes
   if (event.request.url.includes("/api/")) {
     event.respondWith(
@@ -58,3 +58,5 @@ self.addEventListener("fetch", function(event) {
     })
   );
 });
+
+//this is my code

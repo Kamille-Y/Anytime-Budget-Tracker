@@ -20,6 +20,10 @@ request.onsuccess = ({ target }) => {
   if (navigator.onLine) {
     checkDatabase();
   }
+  if (!('indexedDB' in window)) {
+    console.log('This browser doesn\'t support IndexedDB');
+    return;
+  }
 };
 
 request.onerror = function(event) {
@@ -64,4 +68,3 @@ function checkDatabase() {
 // listen for app coming back online
 window.addEventListener("online", checkDatabase);
 
-//this is the code i need
