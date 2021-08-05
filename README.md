@@ -5,8 +5,8 @@ As a busy mom I want to be able to svae and invest for my children however much 
 I want to be ablt to workout a family budget wether online or NOT.
 ## Install
 npm i
-##Usage
+## Usage
 Track spending add or subtract funds on or off line.
-##Questions?
+## Questions?
 GitHub: Kamille-Y
 Email me at kyoung15@mail.bw.edu
